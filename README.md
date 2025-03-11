@@ -1,3 +1,27 @@
+# Vector Interview App Frontend Design
+
+  A frontend for the Vector Interview platform built with Next.js, featuring authentication UI with Login and Signup pages and form validation.
+
+  ## Project Structure
+
+  - `pages/` - Defines routes and page components.
+    - `index.js` - Home page with links to login/signup.
+    - `login.js` - Login page rendering `LoginForm`.
+    - `signup.js` - Signup page rendering `SignupForm`.
+  - `components/` - Reusable UI components.
+    - `LoginForm.js` - Form with email and password fields, validated using Yup.
+    - `SignupForm.js` - Form with email, password, and confirm password fields.
+  - `styles/` - Global styles with Tailwind CSS configuration.
+
+  ## Component Architecture
+
+  - **LoginForm**: Manages email and password inputs with React Hook Form, validated by Yup (email format, min password length).
+  - **SignupForm**: Extends LoginForm with a confirm password field, ensuring passwords match.
+  - **Pages**: Use Tailwind CSS to center forms, providing a responsive layout.
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
