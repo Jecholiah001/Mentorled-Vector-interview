@@ -1,7 +1,8 @@
 import React from 'react';
-    import { useForm } from 'react-hook-form';
-    import { yupResolver } from '@hookform/resolvers/yup';
-    import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import RootLayout from '../app/layout';
 
     // Define validation schema with password confirmation
     const schema = yup.object().shape({
@@ -22,11 +23,11 @@ import React from 'react';
       });
 
       const onSubmit = (data) => {
-        console.log('Signup data:', data);          // Logs form data (replace with API call)
+        console.log('Signup data:', data); // Logs form data (replace with API call)
       };
 
       return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
           {/* Email Field */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -78,7 +79,7 @@ import React from 'react';
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white  bg-gray-900 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Sign up
           </button>
